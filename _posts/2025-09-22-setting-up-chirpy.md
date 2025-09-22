@@ -2,7 +2,7 @@
 title: Datatypes in Java | Deepdive
 date: 2025-09-22 17:04:06 +0200
 categories: [HSLU BsC in Information and Cyber Security, HS25, PRG]
-tags: [prg, java]     # TAG names should always be lowercase
+tags: [java]     # TAG names should always be lowercase
 author: johannes
 description: Basics of datatypes in java.
 
