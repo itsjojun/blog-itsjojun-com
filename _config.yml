@@ -119,9 +119,9 @@ comments:
     issue_term: # < url | pathname | title | ...>
   # Giscus options › https://giscus.app
   giscus:
-    repo: # <gh-username>/<repo>
+    repo: # itsjojun/itsjojun.github.io
     repo_id:
-    category:
+    category: Post Comments
     category_id:
     mapping: # optional, default to 'pathname'
     strict: # optional, default to '0'
