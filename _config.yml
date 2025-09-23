@@ -16,10 +16,10 @@ timezone: Europe/Zurich
 
 title: JOJUNs Blog # the main title
 
-tagline: Posts on HSLU BsC IcS and more... # it will display as the subtitle
+tagline: Topics on HSLU BSc ICS, Azure, Entra ID and more. # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
-  A minimal, responsive and feature-rich Jekyll theme for technical writing.
+  A blog dedicated to topics related to my BSc in Information and Cyber Security at the Lucerne University of Applied Sciences and Arts, as well as other subjects like Azure, Entra ID and HomeLab projects.
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.

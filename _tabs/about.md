@@ -9,8 +9,10 @@ order: 4
 {: .prompt-tip }
 -->
 
-**ABOUT PAGE**
+**A blog dedicated to topics related to my BSc in Information and Cyber Security at the Lucerne University of Applied Sciences and Arts, as well as other subjects like Azure, Entra ID and HomeLab projects.**
 
-*italic text*
+Enjoy!
 
-normal text test
+Feedback, issues and incorrect information: blog@itsjojun.com
+
+*Disclaimer: This is my personal blog. I make no guarantees about the accuracy or completeness of the information provided and am not responsible for any errors or outcomes from using the content.*
