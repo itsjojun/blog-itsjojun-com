@@ -3,13 +3,29 @@ layout: page
 # All the Categories of posts
 ---
 
-{% include lang.html %}
-{% assign filtered_categories = site.categories | jsonify %}
+{% include lang.html %} {% assign sort_categories = site.categories | sort %}
 
-<!-- Embed JSON safely into a script tag -->
-<script id="categoriesData" type="application/json">
-  {{ filtered_categories }}
-</script>
+<!-- Initialize an empty object to hold the filtered categories -->
+{% assign filtered_categories = '' %} {% assign filtered_categories = '{' %}
+
+<!-- Iterate through each category in sort_categories -->
+{% for category in sort_categories %} {% assign category_key = category[0] %} {%
+assign filtered_posts = '' %} {% assign filtered_posts = '[' %}
+
+<!-- Iterate through each post in the current category -->
+{% for post in category[1] %} {% assign filtered_post = '{' %} {% assign
+filtered_post = filtered_post | append: '"url": "' | append: post.url | append:
+'", "title": "' | append: post.title | append: '", "categories": ' | append:
+post.categories | append: '}' %} {% if forloop.last %} {% assign filtered_posts
+= filtered_posts | append: filtered_post %} {% else %} {% assign filtered_posts
+= filtered_posts | append: filtered_post | append: ', ' %} {% endif %} {% endfor
+%} {% assign filtered_posts = filtered_posts | append: ']' %} {% if forloop.last
+%} {% assign filtered_categories = filtered_categories | append: '"' | append:
+category_key | append: '": ' | append: filtered_posts %} {% else %} {% assign
+filtered_categories = filtered_categories | append: '"' | append: category_key |
+append: '": ' | append: filtered_posts | append: ', ' %} {% endif %} {% endfor
+%} {% assign filtered_categories = site.categories | jsonify %}
+
 
 <style>
   .post {
@@ -33,10 +49,9 @@ layout: page
     border-bottom: 1px solid transparent !important;
   }
 </style>
-
 <div id="categoriesContainer"></div>
-
 <script>
+
   function processCategories(jsonData) {
     const categoriesMap = new Map();
     const processedPosts = new Set();
@@ -84,6 +99,8 @@ layout: page
     return Array.from(categoriesMap.values()).filter((cat) => !cat.parent);
   }
 
+
+
   function updateCategoryStats(categories) {
     function calculatePostsAndChildrenCount(category) {
       let postCount = category.postCount;
@@ -101,17 +118,21 @@ layout: page
       return { totalPostCount: postCount, totalChildrenCount: childrenCount };
     }
 
-    return categories.map((category) => {
+    const updatedCategories = categories.map((category) => {
       calculatePostsAndChildrenCount(category);
       return category;
     });
+
+    return updatedCategories;
   }
 
   function renderCategories(categories) {
     let html = '<div class="categories">';
+
     categories.forEach((category, index) => {
       html += renderCategory(category, index, 0);
     });
+
     html += "</div>";
     return html;
   }
@@ -123,7 +144,7 @@ layout: page
 
     let html = `
     <div class="${level == 0 ? "card categories category-paren" : "category-content"}" style="margin-left: ${20 + level * 3}px;">
-      <div id="${headId}" class="${hasChildren && level == 0 ? "card-header d-flex justify-content-between hide-border-bottom" : "list-group"}" style="${hasChildren && level == 0 ? "" : "border-radius: unset; flex-direction: row;justify-content: space-between;padding: 10px; padding-right: 13px;"}">
+      <div id="${headId}" class="${hasChildren && level == 0 ? "card-header d-flex justify-content-between hide-border-bottom" : "list-group "}" style="${hasChildren && level == 0 ? "" : "border-radius: unset; flex-direction: row;justify-content: space-between;padding: 10px; padding-right: 13px;"}">
         <div data-folder-icon="${index}" class="d-flex flex-row justify-content-start align-items-center">
           <i class="category-icon ${hasChildren || category.totalPostCount > 0 ? "far fa-folder-open fa-fw" : "far fa-folder fa-fw"}"></i>
           <a href="/categories/${encodeURIComponent(category.name.replace(/\s+/g, '-').toLowerCase())}/" class="category-name border-transparent mx-2">${category.name}</a>
@@ -137,11 +158,12 @@ layout: page
       </div>
       ${renderPosts(category.posts, level + 1, index)}
       ${hasChildren ? `
-        <div id="${contentId}" class="category-content ${level > 0 ? "border-start" : ""} collapse show">
+        <div id="${contentId}" class="category-content ${level>0?"border-start":""} collapse show">
           ${category.children.map((child, childIndex) => renderCategory(child, `${index}-${childIndex}`, level + 1)).join('')}
         </div>
       ` : ""}
-    </div>`;
+    </div>
+    `;
     return html;
   }
 
@@ -154,7 +176,8 @@ layout: page
       <div class="post" style="align-items: center; display: flex;">
         <i class="post-icon fa-regular fa-file-lines" style="font-size:16px"></i>
         <a href="${post.url}" class="border-transparent post-title mx-2">${post.title}</a>
-      </div>`;
+      </div>
+      `;
     });
     html += "</div>";
     return html;
@@ -182,6 +205,7 @@ layout: page
 
     outerDivs.forEach((outerDiv) => {
       let currentLevel = [outerDiv];
+
       while (currentLevel.length > 0) {
         const nextLevel = [];
         currentLevel.forEach((div) => {
@@ -199,19 +223,18 @@ layout: page
     return deepestDivs;
   }
 
-  document.addEventListener('DOMContentLoaded', function () {
-    const rawJson = document.getElementById("categoriesData").textContent;
-    const obj = JSON.parse(rawJson);
+  document.addEventListener('DOMContentLoaded', function() {
+      var obj = {{ filtered_categories | jsonify }};
+      const categoriesContainer = document.getElementById("categoriesContainer");
+      const hierarchicalCategories = processCategories(obj);
+      console.log('Hierarchical Categories:', hierarchicalCategories);
+      categoriesContainer.innerHTML = renderCategories(updateCategoryStats(hierarchicalCategories));
+      setupTriggerIcons();
+      const deepestDivs = getDeepestDivs();
 
-    const categoriesContainer = document.getElementById("categoriesContainer");
-    const hierarchicalCategories = processCategories(obj);
-    console.log('Hierarchical Categories:', hierarchicalCategories);
-    categoriesContainer.innerHTML = renderCategories(updateCategoryStats(hierarchicalCategories));
-    setupTriggerIcons();
-
-    const deepestDivs = getDeepestDivs();
-    deepestDivs.forEach((div) => {
+      deepestDivs.forEach((div) => {
       div.classList.add("deepest");
-    });
-  });
+      });
+
+  })
 </script>
