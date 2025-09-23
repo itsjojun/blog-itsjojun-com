@@ -151,7 +151,7 @@ paginate: 10
 
 # The base URL of your site
 baseurl: "" # empty for itsjojun.github.io repo
-relative_url: true
+relative_url: true # relative urls bec hosting on gh pages
 
 # ------------ The following options are not recommended to be modified ------------------
 
