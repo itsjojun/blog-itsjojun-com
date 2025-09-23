@@ -145,12 +145,9 @@ layout: page
     return html;
   }
 
-  // TO COLLAPSE, REPLACE LINE 140 WITH: <div id="${contentId}" class="category-content ${level > 0 ? "border-start" : ""} collapse show">
-
   function renderPosts(posts, level, index) {
     if (posts.length === 0) return "";
 
-    // let html = `<div id="c-${index}" class="posts-${level - 1} category-content collapse show" style="margin-left: ${20 + level * 3}px;">`;
     let html = `<div id="c-${index}" class="posts-${level - 1} category-content collapse" style="margin-left: ${20 + level * 3}px;">`;
     posts.forEach((post) => {
       html += `
