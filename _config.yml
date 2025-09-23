@@ -16,7 +16,7 @@ timezone: Europe/Zurich
 
 title: JOJUN's Blog # the main title
 
-tagline: Topics on my HSLU ICS BSc, Azure, Entra ID and more. # it will display as the subtitle
+tagline: Posts related to my BSc in Cyber Security, as well as Azure, Entra ID, and more. # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
   A blog dedicated to topics related to my BSc in Information and Cyber Security at the Lucerne University of Applied Sciences and Arts, as well as other subjects like Azure, Entra ID and HomeLab projects.
