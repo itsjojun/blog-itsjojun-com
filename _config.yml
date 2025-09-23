@@ -14,7 +14,7 @@ timezone: Europe/Zurich
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: JOJUNs Blog # the main title
+title: JOJUN's Blog # the main title
 
 tagline: Topics on my HSLU ICS BSc, Azure, Entra ID and more. # it will display as the subtitle
 
