@@ -16,7 +16,7 @@ timezone: Europe/Zurich
 
 title: JOJUNs Blog # the main title
 
-tagline: Topics on HSLU BSc ICS, Azure, Entra ID and more. # it will display as the subtitle
+tagline: Topics on my HSLU ICS BSc, Azure, Entra ID and more. # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
   A blog dedicated to topics related to my BSc in Information and Cyber Security at the Lucerne University of Applied Sciences and Arts, as well as other subjects like Azure, Entra ID and HomeLab projects.
@@ -35,7 +35,7 @@ social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: JOJUN
-  email: tschoutschun@itsjojun.com # change to your email address
+  email: blog@itsjojun.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
     - https://twitter.com/itsjojun # change to your Twitter homepage
