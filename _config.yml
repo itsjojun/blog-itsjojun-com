@@ -150,7 +150,8 @@ pwa:
 paginate: 10
 
 # The base URL of your site
-baseurl: "/" # empty for itsjojun.github.io repo
+baseurl: "" # empty for itsjojun.github.io repo
+relative_url: true
 
 # ------------ The following options are not recommended to be modified ------------------
 
