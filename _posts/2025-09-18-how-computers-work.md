@@ -1,10 +1,10 @@
 ---
-title: Datatypes in Java | Deepdive
+title: How Computers work
 date: 2025-09-22 17:04:06 +0200
-categories: [HSLU BSc in Information and Cyber Security (ICS), HS25, PRG]
-tags: [prg, java]     # TAG names should always be lowercase
+categories: [Introduction into Computing for Beginners, Computing Basics]
+tags: [computing basics]     # TAG names should always be lowercase
 author: johannes
-description: Basics of datatypes in java.
+description: A brief and simple overview of how computers work.
 
 # toc: false    # disable table of contents for this post
 # comments: false   # disable commenting for this post
