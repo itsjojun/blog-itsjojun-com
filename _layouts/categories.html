@@ -24,8 +24,7 @@ post.categories | append: '}' %} {% if forloop.last %} {% assign filtered_posts
 category_key | append: '": ' | append: filtered_posts %} {% else %} {% assign
 filtered_categories = filtered_categories | append: '"' | append: category_key |
 append: '": ' | append: filtered_posts | append: ', ' %} {% endif %} {% endfor
-%} {% assign filtered_categories = site.categories | jsonify %}
-
+%} {% assign filtered_categories = filtered_categories | append: '}' %}
 
 <style>
   .post {
@@ -158,7 +157,7 @@ append: '": ' | append: filtered_posts | append: ', ' %} {% endif %} {% endfor
       </div>
       ${renderPosts(category.posts, level + 1, index)}
       ${hasChildren ? `
-        <div id="${contentId}" class="category-content ${level>0?"border-start":""} collapse">
+        <div id="${contentId}" class="category-content ${level>0?"border-start":""} collapse show">
           ${category.children.map((child, childIndex) => renderCategory(child, `${index}-${childIndex}`, level + 1)).join('')}
         </div>
       ` : ""}
@@ -223,20 +222,18 @@ append: '": ' | append: filtered_posts | append: ', ' %} {% endif %} {% endfor
     return deepestDivs;
   }
 
-  document.addEventListener('DOMContentLoaded', function () {
-    const rawJson = document.getElementById("categoriesData").textContent;
-    const obj = JSON.parse(rawJson);
+  document.addEventListener('DOMContentLoaded', function() {
+      var obj = {{ filtered_categories | strip_newlines }};
+      const categoriesContainer = document.getElementById("categoriesContainer");
+      const hierarchicalCategories = processCategories(obj);
+      console.log('Hierarchical Categories:', hierarchicalCategories);
+      categoriesContainer.innerHTML = renderCategories(updateCategoryStats(hierarchicalCategories));
+      setupTriggerIcons();
+      const deepestDivs = getDeepestDivs();
 
-    const categoriesContainer = document.getElementById("categoriesContainer");
-    const hierarchicalCategories = processCategories(obj);
-    console.log('Hierarchical Categories:', hierarchicalCategories);
-    categoriesContainer.innerHTML = renderCategories(updateCategoryStats(hierarchicalCategories));
-    setupTriggerIcons();
-
-    const deepestDivs = getDeepestDivs();
-    deepestDivs.forEach((div) => {
+      deepestDivs.forEach((div) => {
       div.classList.add("deepest");
-    });
+      });
 
   })
 </script>
