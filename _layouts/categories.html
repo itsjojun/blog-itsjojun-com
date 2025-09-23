@@ -137,7 +137,7 @@ layout: page
       </div>
       ${renderPosts(category.posts, level + 1, index)}
       ${hasChildren ? `
-        <div id="${contentId}" class="category-content ${level > 0 ? "border-start" : ""} collapse show">
+        <div id="${contentId}" class="category-content ${level > 0 ? "border-start" : ""} collapse">
           ${category.children.map((child, childIndex) => renderCategory(child, `${index}-${childIndex}`, level + 1)).join('')}
         </div>
       ` : ""}
@@ -145,10 +145,13 @@ layout: page
     return html;
   }
 
+  // TO COLLAPSE, REPLACE LINE 140 WITH: <div id="${contentId}" class="category-content ${level > 0 ? "border-start" : ""} collapse show">
+
   function renderPosts(posts, level, index) {
     if (posts.length === 0) return "";
 
-    let html = `<div id="c-${index}" class="posts-${level - 1} category-content collapse show" style="margin-left: ${20 + level * 3}px;">`;
+    // let html = `<div id="c-${index}" class="posts-${level - 1} category-content collapse show" style="margin-left: ${20 + level * 3}px;">`;
+    let html = `<div id="c-${index}" class="posts-${level - 1} category-content collapse" style="margin-left: ${20 + level * 3}px;">`;
     posts.forEach((post) => {
       html += `
       <div class="post" style="align-items: center; display: flex;">
