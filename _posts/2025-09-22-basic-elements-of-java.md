@@ -86,7 +86,3 @@ Value can be changed at will -> that why its called a *variable*.
   public int add(int a, int b) {
       return a + b;
   }`
-
-{% include prompt.html type="info" title="Info" %}
-*`string` is not a primitive datatype but a reference type representing a sequence (concatenation) of `char` values.*
-{% endinclude %}
