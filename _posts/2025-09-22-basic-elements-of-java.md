@@ -11,6 +11,7 @@ description: Basics of datatypes in java.
 ---
 
 ## Data types
+
 As already demonstrated in the Article XYZ, computers do only actually 'understand' two states: `on` or `off`, or in otherwords `0` or `1`. So in the end, all data a computer processes needs to be so called binary, meaning either `0` or `1`. In order to save different types of data, so called data types have been defined. Data types can be unserstood as definitions that have been set by humans at some point, that define what types of data can be stored how.
 
 | Type           | Data type  | Size    | Range                      |
@@ -24,11 +25,9 @@ As already demonstrated in the Article XYZ, computers do only actually 'understa
 | Floating Point | **float**  | 4 bytes | ~`±3.4E−38` → `±3.4E38`    |
 | Floating Point | **double** | 8 bytes | ~`±1.7E−308` → `±1.7E308`  |
 
-
 **Some things to consider:**
 
 - *The data types in the table above are primitive (a.k.a. elementary or atomic) because they cannot be broken down any further and directly save data at machinecode (binary) level.*
-- *`string` is not a primitive datatype but a reference type representing a sequence (concatenation) of `char` values.*
 - Data types which can store both negative and positive values are of the type `signed` and those who can only store positive values (0 and up) are of the type `unsigned`.
 
 ## Variables
@@ -40,7 +39,6 @@ A variable consists of:
 - Value
 
 Value can be changed at will -> that why its called a *variable*.
-
 
 # Basic Elements of Java Programming
 
@@ -84,7 +82,11 @@ Value can be changed at will -> that why its called a *variable*.
 - Blocks of code that perform a specific task.
 - Can take parameters and return values.
 - Example:
-  ```java
+  `java
   public int add(int a, int b) {
       return a + b;
-  }
+  }`
+
+{% include prompt.html type="info" title="Info" %}
+*`string` is not a primitive datatype but a reference type representing a sequence (concatenation) of `char` values.*
+{% endinclude %}
