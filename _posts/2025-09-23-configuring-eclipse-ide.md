@@ -10,6 +10,12 @@ description: Basics of datatypes in java.
 # comments: false   # disable commenting for this post
 ---
 
+> tip
+{: .prompt-tip }
+
+> Example line for prompt.
+{: .prompt-info }
+
 # Basic Datatypes
 
 **int**
