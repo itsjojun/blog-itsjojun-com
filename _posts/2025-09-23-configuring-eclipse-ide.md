@@ -12,12 +12,9 @@ description: Basics of datatypes in java.
 
 > tip
 {: .prompt-tip }
-
 > Example line for prompt.
 {: .prompt-info }
 
-# Basic Datatypes
-
-**int**
+## Basic Datatypes
 
 Basics of IT Sec

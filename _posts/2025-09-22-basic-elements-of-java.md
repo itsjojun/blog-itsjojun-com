@@ -30,6 +30,8 @@ As already demonstrated in the Article XYZ, computers do only actually 'understa
 - *The data types in the table above are primitive (a.k.a. elementary or atomic) because they cannot be broken down any further and directly save data at machinecode (binary) level.*
 - Data types which can store both negative and positive values are of the type `signed` and those who can only store positive values (0 and up) are of the type `unsigned`.
 
+### Basic Elements of Java Programming
+
 ## Variables
 
 A variable consists of:
@@ -40,24 +42,24 @@ A variable consists of:
 
 Value can be changed at will -> that why its called a *variable*.
 
-# Basic Elements of Java Programming
-
-## Variables
 - Storage containers for data.
 - Must have a datatype (e.g., `int`, `double`, `char`, `boolean`) and a name.
 - Example: `int age = 21;`
 
 ## Data Types
+
 - Define the type of data a variable can hold.
 - Primitive types: `byte`, `short`, `int`, `long`, `float`, `double`, `char`, `boolean`
 - Reference types: Objects like `String`, arrays, custom classes
 
 ## Strings
+
 - Sequences of characters.
 - Reference type, not primitive.
 - Example: `String name = "John";`
 
 ## Operators
+
 - Used to perform operations on variables and values.
 - Examples:
   - Arithmetic: `+`, `-`, `*`, `/`, `%`
@@ -65,20 +67,24 @@ Value can be changed at will -> that why its called a *variable*.
   - Logical: `&&`, `||`, `!`
 
 ## Keywords
+
 - Reserved words with special meaning in Java.
 - Examples: `class`, `public`, `static`, `void`, `if`, `else`, `for`, `while`
 
 ## Comments
+
 - Non-executable lines used to describe code.
 - Single-line: `// comment`
 - Multi-line: `/* comment */`
 
 ## Constants
+
 - Fixed values that cannot be changed once assigned.
 - Declared with the `final` keyword.
 - Example: `final double PI = 3.14159;`
 
 ## Methods
+
 - Blocks of code that perform a specific task.
 - Can take parameters and return values.
 - Example:

@@ -10,13 +10,23 @@ description: A brief and simple overview of how computers work.
 # comments: false   # disable commenting for this post
 ---
 
-# How Computers Handle Data in Binary
+## How Computers do anything
 
-Computers handle data using **binary**, which means everything is stored as **0s and 1s**.
+Computers don’t understand words, pictures, or numbers the way humans do. In fact they actually do not really 'understand' or work with more than two things which, at the most basic level are two kind of states, POWER OFF and POWER ON. Or something or nothing, yes or no, or positive or negative, or just simply put in numbers, 0 and 1.
 
-Computers don’t understand words, pictures, or numbers the way humans do. At the most basic level, they are made of tiny switches called **transistors**. A switch can be **ON** or **OFF**, just as any switch (e. g. a light switch) can. A turned off switch or transistor is described as to be at state `0` and a turned on switch or transistor at state `1`. You may also know this way of describing on or off states from your home devices like switches on vacum cleaners and so on.
+At the most basic level computers are all made up of tiny switches called **transistors**. Each an every one of these switches can be **ON** or **OFF**, just as any switch (e. g. a light switch) can. A turned off switch or transistor (thats what they are correctly called) is described as to be at state `0` and a turned on switch or transistor at state `1`. You may also know this way of describing on or off states from your home devices like switches on vacum cleaners and so on.
 
-Because computers can only handle `on` or `off` states or, correctly saying, `0` and `1`, every piece of data like numbers, letters, images, movies, music is converted into a **long sequence of 0s and 1s** and handled as it by the computer.
+Because computers can only handle and save `on` or `off` states or, correctly saying, `0` and `1`, every piece of "data" we as humans know as such (like digital emails, images, movies, music, etc.) is converted into a **long sequence of 0s and 1s** and handled as it by the computer.
+
+This system of 0s and 1s is called the binary system, as there only do exist *two* states. The word binary comes from the Latin word bini, meaning two together or pair.
+
+Now knowing that, implies that for saving large amounts of data (), computers must have many of these switches. And they do,  
+
+Fascinating, isn't it? But its not the end.
+
+In order to be able to handle and store a image or video, a computer needs
+
+where does computer word come from?
 
 - Using only two states makes computers **fast, reliable, and simple**.
 
