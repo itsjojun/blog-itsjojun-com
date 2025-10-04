@@ -10,7 +10,17 @@ description: A brief and simple overview of how computers work.
 # comments: false   # disable commenting for this post
 ---
 
-Computers don’t really understand words, pictures, or videos the way humans do. In fact, they don’t really "understand" anything at that all. In fact, at their core, computers only really "understand" and therefore work with just two basic things: **on** and **off**. That’s it. You can think of it like power being either **OFF** or **ON**, something or nothing, yes or no, false or true or simply **0** and **1**.
+Computers don’t really understand words, pictures or videos the way humans do. In fact, they only really "understand" and therefore work with one thing: On/Off switches.
+
+Sounds basic? It is (kinda)! But why switches you may ask? Well, let me explain. Every On/Off switch can be in two states. `On` or `Off`. One could also say `Yes` or `No`. Or `True` or `False`. Or simply put in numbers, `0` and `1`. 
+
+One day in Germany,  a man called Gottfried Wilhelm Leibniz, a Mathematician who lived from 1646 to 1716, in the year 1703 written and 1705 published a paper called "Explication de l’arithmétique binaire [...]" (English: Explanation of the Binary Arithmetic)  in which he described his discoveries on the binary system and potential use cases for it. This system as (btw not newly discovered, but just refined and improved with more arthemic operations) described by him, which is a numerical system 
+
+which uses only the characters 1 and 0, and some remarks on its usefulness.
+https://en.wikipedia.org/wiki/Binary_code
+
+
+
 
 Everything inside a computer boils down to these two states. And how does it do that? Well, it’s all thanks to tiny little components called **transistors**. A transistor is basically a super small switch. Each one can be turned **on** or **off**, just like a light switch on your wall. When it’s off, that’s a `0`. When it’s on, that’s a `1`.
 
