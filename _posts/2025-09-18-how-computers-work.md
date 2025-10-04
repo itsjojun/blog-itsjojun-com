@@ -10,36 +10,27 @@ description: A brief and simple overview of how computers work.
 # comments: false   # disable commenting for this post
 ---
 
-## How Computers do anything
+Computers don’t really understand words, pictures, or videos the way humans do. In fact, they don’t really "understand" anything at that all. In fact, at their core, computers only really "understand" and therefore work with just two basic things: **on** and **off**. That’s it. You can think of it like power being either **OFF** or **ON**, something or nothing, yes or no, false or true or simply **0** and **1**.
 
-Computers don’t understand words, pictures, or numbers the way humans do. In fact they actually do not really 'understand' or work with more than two things which, at the most basic level are two kind of states, POWER OFF and POWER ON. Or something or nothing, yes or no, or positive or negative, or just simply put in numbers, 0 and 1.
+Everything inside a computer boils down to these two states. And how does it do that? Well, it’s all thanks to tiny little components called **transistors**. A transistor is basically a super small switch. Each one can be turned **on** or **off**, just like a light switch on your wall. When it’s off, that’s a `0`. When it’s on, that’s a `1`.
 
-At the most basic level computers are all made up of tiny switches called **transistors**. Each an every one of these switches can be **ON** or **OFF**, just as any switch (e. g. a light switch) can. A turned off switch or transistor (thats what they are correctly called) is described as to be at state `0` and a turned on switch or transistor at state `1`. You may also know this way of describing on or off states from your home devices like switches on vacum cleaners and so on.
+You’ve probably seen this kind of switching in real life — think of the power button on your vacuum cleaner, or the ON/OFF switch on a lamp. It’s the same basic idea, just much, much smaller and much, much faster inside a computer.
 
-Because computers can only handle and save `on` or `off` states or, correctly saying, `0` and `1`, every piece of "data" we as humans know as such (like digital emails, images, movies, music, etc.) is converted into a **long sequence of 0s and 1s** and handled as it by the computer.
+Because computers can only work with these on/off states, everything we do on a computer — whether it's reading an email, watching a video, or listening to music — gets converted into **long sequences of 0s and 1s**. To the computer, that’s all data is: just millions (or billions) of tiny switches flipping between off and on, over and over.
 
-This system of 0s and 1s is called the binary system, as there only do exist *two* states. The word binary comes from the Latin word bini, meaning two together or pair.
+This system of 0s and 1s is called the **binary system**. The name comes from the Latin word *bini*, which means “two together” or "a pair."
 
-Now knowing that, implies that for saving large amounts of data (), computers must have many of these switches. And they do,  
+And because everything must be represented using just two options, computers need a *lot* of transistors to store and process all that information. Like, a *lot*. Modern processors contain **billions** of them, all packed into a chip no bigger than a fingernail. That’s what allows computers to do the massive amounts of work they do, from browsing the web to running 3D games.
 
-Fascinating, isn't it? But its not the end.
+Pretty fascinating, right? And it doesn’t stop there.
 
-In order to be able to handle and store a image or video, a computer needs
+To make sense of those long strings of 0s and 1s, humans have come up with systems for encoding information. These systems define what specific combinations of bits mean. For example, in a widely used system called **ASCII**, the letter `'A'` is represented as `01000001`. The number `5` in binary is `00000101`.
 
-where does computer word come from?
+These encodings are how we go from a bunch of electrical signals to things like text, images, videos, and apps. Without them, binary would just be meaningless noise.
 
-- Using only two states makes computers **fast, reliable, and simple**.
+> The word *computer* originally didn’t refer to a machine at all. It used to mean a **person** — someone whose job was to do math and calculations by hand. Over time, machines took over that job, and the word shifted to what we know today.
+{: .prompt-info }
 
-now to make use of this system, gremiums defined encoding for these sequences of `0`s and `1`s. For example:
+Finally, using only two states — on and off — has a big advantage. It makes computers **fast**, **reliable**, and **simple** at the hardware level. There’s less room for confusion, less chance for error, and the switching can happen at incredible speeds.
 
-- Example: The letter `'A'` → `01000001` (ASCII encoding)
-- Example: The number `5` → `00000101` (binary)
-  
-## How Computers Use Binary
-
-- The CPU reads these 0s and 1s and performs operations using **logic circuits**.
-- These circuits can **add numbers, compare values, or check true/false conditions**.
-
-## Summary
-
-Binary is the **language of computers**. Everything gets translated into 0s and 1s so the machine can **store, process, and understand** data efficiently.
+And that’s how computers — using nothing more than tiny switches and two basic states — do everything they do.
