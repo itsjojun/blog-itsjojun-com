@@ -12,7 +12,7 @@ description: Java Datatypes
 
 ## Datatypes
 
-As already demonstrated in Article *How Computers Work*, computers only really "*understand*" binary or to be percise:`0`s and `1`s. So in the end, all data a computer processes has to be binary data, meaning every image, word, or number must be represented as a long sequence of `0`s and `1`s.
+As already demonstrated in the Article *How Computers Work*, computers only really "*understand*" binary or to be percise:`0`s and `1`s. So in the end, all data a computer processes has to be binary data, meaning every image, word, or number must be represented as a long sequence of `0`s and `1`s.
 
 Now, because we humans use the base-10 (decimal) system in our daily lives, but computers only work with base-2, there are so-called **data types**, which make it easier for us to interact with computers and store whole (decimal) numbers. These data types define how numbers (and other kinds of data) are stored and in what range. Basically, data types are just rules humans set up to decide WHAT kind of data can be stored and HOW.
 
