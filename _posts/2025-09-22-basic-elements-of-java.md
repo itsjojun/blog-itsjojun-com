@@ -12,11 +12,11 @@ description: Java Datatypes
 
 ## Datatypes
 
-As already shown in Article *How Computers Work*, computers only really "understand" binara, so simply put: `0s` and `1s`. So in the end, all data a computer processes has to be binary data, meaning every image, word, or number must be represented as a long sequence of `0`s and `1`s.  
+As already demonstrated in Article *How Computers Work*, computers only really "*understand*" binary or to be percise:`0`s and `1`s. So in the end, all data a computer processes has to be binary data, meaning every image, word, or number must be represented as a long sequence of `0`s and `1`s.
 
-To make it easier for us humans to also work with base-10 (decimal) numbers inside a program in Java, there are so-called **data types**. These define how numbers (and other kinds of data) are stored and in what range. Basically, data types are just rules humans set up to decide what kind of data can be stored and how.
+Now, because we humans use the base-10 (decimal) system in our daily lives, but computers only work with base-2, there are so-called **data types**, which make it easier for us to interact with computers and store whole (decimal) numbers. These data types define how numbers (and other kinds of data) are stored and in what range. Basically, data types are just rules humans set up to decide WHAT kind of data can be stored and HOW.
 
-Here are the main ones in Java:
+Here are the main data types in Java:
 
 | Category       | Data type  | Size    | Range                      |
 |----------------|------------|---------|----------------------------|
@@ -29,22 +29,24 @@ Here are the main ones in Java:
 | Floating Point | **float**  | 4 bytes | ~`±3.4E−38` → `±3.4E38`    |
 | Floating Point | **double** | 8 bytes | ~`±1.7E−308` → `±1.7E308`  |
 
-**Some things to consider:**
+**Some things to note:**
 
-- *In math, infinity is just taken for granted when calculating, but with computers and datatypes you can’t actually represent infinity — finite resources can only represent finite numbers.*
-- *Technically, a `boolean` in Java doesn’t have a guaranteed size (it depends on the JVM), but it’s often stored as 1 byte for practicality.*
 - *The data types in the table above are primitive (a.k.a. elementary or atomic) because they cannot be broken down any further and directly save data at machinecode (binary) level.*
+- *In math, infinity is just taken for granted when calculating, but with computers and datatypes you can’t represent infinity because finite resources cannot represent infinite numbers.*
+- *Technically, a `boolean` in Java doesn’t have a guaranteed size (it depends on the JVM), but it’s often stored as 1 byte for practicality.*
 - *Data types which can store both negative and positive values are of the type `signed` and those who can only store positive values (0 and up) are of the type `unsigned`.*
 
+<!-- Final Version until here! -->
 ## Variables
 
-A variable consists of:
+A variable is (according to Wikipedia) a *symbolic name* associated with a value and whose associated value may be changeda. So basically, like some sort of Box which can contain a range of objects of choice, as long as they fit inside the Box. Such a Variable consists of:
 
-- Datatype and therefore Range
+- A Data type and therefore a Range (e. g. data type Integer -> `-2^31` → `2^31 - 1`)
 - Name
 - Value
 
-Value can be changed at will -> that why its called a *variable*.
+Example for Java:
+`int age = 10;`
 
 - Storage containers for data.
 - Must have a datatype (e.g., `int`, `double`, `char`, `boolean`) and a name.
